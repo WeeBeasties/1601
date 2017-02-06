@@ -7,24 +7,67 @@ Over a span of `r max(myData$Order)` semesters, `r round(sum(averages$mean >= 2.
 ## Faculty feedback {-}
 This report will be distributed to members of the General Education Committee, Academic Senate, and the Department of Biological Sciences.  These individuals will be asked to provide their comments, suggestions, and concerns about this report and the processes involved in its creation. What thoughts do you have about:
 
-- The data provenance plan?  
-- The format of this report?  
-- The content of this report?  
-- The utility of the meta-analysis?  
-- The public release of assessment results?  
-- Any other topics you can think of?  
+* **Q01** - What is your opinion of the format of the General Education assessment report?
+* **Q02** - What is your opinion of the content of the General Education assessment report?
+* **Q03** - What is your opinion of the data provenance plan for General Education?
+* **Q04** - What is your opinion of the use of meta-analysis in the General Education assessment report?
+* **Q05** - What is your opinion of the plan to publicly share assessment data, analyses, and reports?
+* **Q06** - What suggestions do you have to improve the General Education Report?
+
+```{r survey, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=2, fig.cap="Results of the faculty survey (n=12)"}
+
+library("likert")
+Q01 <- c(rep("Strongly Dislike",0),
+       rep("Somewhat Dislike", 0),
+       rep("Neutral", 2),
+       rep("Somewhat Like", 13),
+       rep("Strongly Like", 5))
+Q02 <- c(rep("Strongly Dislike",0),
+       rep("Somewhat Dislike", 0),
+       rep("Neutral", 2),
+       rep("Somewhat Like", 5),
+       rep("Strongly Like", 5))
+Q03 <- c(rep("Strongly Dislike",1),
+       rep("Somewhat Dislike", 0),
+       rep("Neutral", 1),
+       rep("Somewhat Like", 6),
+       rep("Strongly Like", 3))
+Q04 <- c(rep("Strongly Dislike",0),
+       rep("Somewhat Dislike", 1),
+       rep("Neutral", 4),
+       rep("Somewhat Like", 1),
+       rep("Strongly Like", 6))
+Q05 <- c(rep("Strongly Dislike",0),
+       rep("Somewhat Dislike", 1),
+       rep("Neutral", 5),
+       rep("Somewhat Like", 1),
+       rep("Strongly Like", 5))
+myData1 <- as.data.frame(cbind(Q05,Q04,Q03,Q02,Q01))
+for (x in 1:length(myData1))
+{myData1[,x] <- factor(myData1[,x], levels=c("Strongly Dislike", "Somewhat Dislike","Neutral","Somewhat Like","Strongly Like"))}
+myResults1 <- likert(myData1)
+p <- likert.bar.plot(myResults1, 
+		include.center = TRUE, 
+		ordered=TRUE, 
+		neutral.color="grey80", 
+		high.color="dodgerblue", 
+		low.color="firebrick",
+		text.size=3,
+		cex.axis=4,
+		cex.labels=4)
+p + theme_bw()
+```
 
 ## Plan of action {-}
 After analyzing the data and considering the comments provided in the faculty feedback, the relevant General Education sub-committee members will make one or more recommendations for future work. Some of the possible actions could include:
-\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-\item No modifications -- continue to gather data
-\item Convene a training session to get better inter-course reliability
-\item Suggest modifications to the types of assignments that are used
-\item Suggest modifications to which data workbooks are used
-\item Suggest that instructors consider modifying the scope or sequence of instruction
-\item Modify the learning outcomes themselves
-\item Modify the competency as a whole
-\end{itemize}
+
+* No modifications -- continue to gather data
+* Convene a training session to get better inter-course reliability
+* Suggest modifications to the types of assignments that are used
+* Suggest modifications to which data workbooks are used
+* Suggest that instructors consider modifying the scope or sequence of instruction
+* Modify the learning outcomes themselves
+* Modify the competency as a whole
 
 ## Acknowledgments {-}
 
