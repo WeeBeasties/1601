@@ -1,5 +1,5 @@
 --- 
-title: "General Education Report^[Report number 201601, DOI [10.17605/OSF.IO/FD6QR](https://doi.org/10.17605/OSF.IO/FD6QR)]"
+title: "General Education Report^[Report number 201601, DOI [10.17605/OSF.IO/35GSR](https://doi.org/10.17605/OSF.IO/35GSR)]"
 subtitle: "Meta-Analysis of Student Achievement on Natural Sciences FLO SCI1 in a 200-Level Biology Course"
 author: 
   - "Dr. Clifton Franklund"
