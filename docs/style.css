@@ -12,7 +12,25 @@ pre {
 pre code {
   white-space: inherit;
 }
-
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  text-align: center;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
+}
 
 #abstract h1, #intro h1, #methods h1, #results h1, #discussion h1, #references h1{
 	background: firebrick;
@@ -42,7 +60,4 @@ pre code {
 	postion: relative;
 	line-height: 5;
 }
-#session{
-	font-family:Courier;
-	font-size:10pt;
-}
+
