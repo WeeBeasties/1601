@@ -1,0 +1,11 @@
+book_filename: "report"
+chapter_name: ""
+repo: https://github.com/WeeBeasties/1601_SCI1
+output_dir: docs
+rmd_files:
+  html: ["index.Rmd","01-Introduction.Rmd","02-Methods.Rmd","03-Results.Rmd","04-Discussion.Rmd","05-References.Rmd"]
+  latex: ["index.Rmd","01-Introduction.Rmd","02-Methods.Rmd","03-Results.Rmd","04-Discussion.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+new_session: no
+comments: true
+edit: https://github.com/WeeBeasties/1601_SCI1/blob/master/%s

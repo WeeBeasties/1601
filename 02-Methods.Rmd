@@ -1,0 +1,46 @@
+# Methods {#methods -}
+
+## Collection of assessment data {-}
+Student performance on the first lecture exam in a 200-level Biology course was analyzed. The content assessed in all exams was biological diversity. However, the number and format of the questions used varied by semester. Individual student scores were collected using the new General Education Natural Sciences "scores" data workbook for `r max(myData$Order)` semesters. Student scores were automatically converted to a rubric score by the workbook using the equivalencies shown in Table \@ref(tab:convert).
+
+```{r convert, echo=FALSE, out.width=4}
+Correct <- c("0.0 to 49.0%","50.0 to 59.9%","60.0 to 69.9%","70.0 to 84.9%","85.0 to 100.0%")
+Rubric <- c(0,1,2,3,4)
+Interpretation <- c("Unsatisfactory","Beginning","Developing","Proficient","Advanced")
+tableData <- as.data.frame(cbind(Correct,Rubric,Interpretation))
+colnames(tableData) <- c("Percent Correct","Rubric","Interpretation")
+knitr::kable(tableData, caption="Conversion of percentages to rubric scores", align=c("l","c","r"), booktabs=TRUE)
+
+```
+
+These workbook files contain personally identifiable information (PII) and are, therefore, subject to FERPA regulations. For this reason, they are not directly shared. Instead, they are permanently housed within the Proof_of_Concept folder under Core Competency: Natural Sciences in TracDat.
+
+## De-identification of student data {-}
+Copies of the `r max(myData$Order)` data files were downloaded from TracDat. An R aggregator script was used to read the data from these data sheets and concatenate it into one data set in a destructive process -- the downloaded copies were deleted in the process. Student names and identification numbers were redacted and each student's entry was given a unique eight-digit identifier - the Record.Key. These keys may be used for longitudinal studies in the future. The algorithm used is kept in an encrypted site and shared with _no one_. The de-identified data set contains `r length(myData$Order)` student entries and is formatted as a comma-delimited text file (BIOL200Data.csv).
+
+## Data provenance {-}
+Data provenance refers to a system that permits tracking of the origin, movement, modification, and utilization of data sets [@Buneman2001]. The provenance of General Education data will be explicitly declared to facilitate the reproducibility and extensibility of these studies.
+
+### Location of public website files {-}
+All files related to this report can be found online at the Open Science Framework [@Nosek2012]. This site contains all of the files needed to reproduce this report from the de-identified data set. The site's url is [https://osf.io/t6u8m/](https://osf.io/t6u8m/).
+
+### Session information {-}
+This report was written using RStudio [@Rstudio] and the R statistical programming language [@R]. These products are free to download for PC, Macintosh, and Linux operating systems. The following information pertains to the session parameters used to generate this report. If you have trouble reproducing this report, it may be due to different session parameters. You may contact [Dr. Franklund](mailto:CliftonFranklund@ferris.edu) if you need assistance.
+
+```{R Session, echo=FALSE, comment=FALSE, error=FALSE, results='asis'}
+pander(sessionInfo())
+```
+
+### Processing instructions {-}
+This project produced a computationally reproducible assessment report (this document). Anyone wishing to recreate this report from the source document will need to install the following on their computer:
+
+1. [An installation of the R programming language](https://www.r-project.org)
+2. [An installation of the RStudio IDE](https://www.rstudio.com/products/rstudio/download3/)
+3. [An installation of LaTeX](https://www.latex-project.org/get/)
+
+The necessary source files include the de-identified data set (BIOL200Data.csv), Rmarkdown code files (index.Rmd, 01-Introduction.Rmd, 02-Methods.Rmd, 03-Results.Rmd, 04-Discussion.Rmd, and 05-References.Rmd), bibtex reference file (references.bib), and custom art file in the /art folder.
+
+To process the files, you must first open the project in RStudio. Click on the "Build Book" button in the Build menu. Bookdown allows you to build this project as git_book (html site), pdf_book (via LaTeX), or epub_book (compatible with iBooks and other e-book readers).
+
+### Citation of this work {-}
+All of the de-identified data, analysis code, and documentation that constitute this report project may be freely used, modified, and shared. The de-identified data set, BIOL200Data.csv, is released under the Creative Commons [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/). All documentation, including README.md, Codebook.md, and this report, are released under the Creative Commons [CC-BY](https://creativecommons.org/licenses/by/4.0/) licence. Any questions, comments, or suggestions may be sent to [Dr. Franklund](mailto:CliftonFranklund@ferris.edu).

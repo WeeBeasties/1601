@@ -1,0 +1,31 @@
+# Discussion {#discussion -}
+
+A novel approach for the collection, aggregation, analysis, and reporting of General Education assessment data has been developed. Computationally reproducible reports can easily be generated and distributed to improve the program over time. A meta-analysis of data collected from a 200-level Biology course was used as a proof-of-concept.
+
+Over a span of `r max(myData$Order)` semesters, `r round(sum(averages$mean >= 2.6)/length(averages$mean)*100,1)`% of courses had mean scores considered to be proficient. Of all students in all semesters, `r round(sum(myData$SCI1 >= 3)/length(myData$SCI1)*100,1)`% met or exceeded the competence threshold. From these data it is inferred that the students meet (just barely) the threshold of competence.
+
+## Faculty feedback {-}
+This report will be distributed to members of the General Education Committee, Academic Senate, and the Department of Biological Sciences.  These individuals will be asked to provide their comments, suggestions, and concerns about this report and the processes involved in its creation. What thoughts do you have about:
+
+- The data provenance plan?  
+- The format of this report?  
+- The content of this report?  
+- The utility of the meta-analysis?  
+- The public release of assessment results?  
+- Any other topics you can think of?  
+
+## Plan of action {-}
+After analyzing the data and considering the comments provided in the faculty feedback, the relevant General Education sub-committee members will make one or more recommendations for future work. Some of the possible actions could include:
+\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+\item No modifications -- continue to gather data
+\item Convene a training session to get better inter-course reliability
+\item Suggest modifications to the types of assignments that are used
+\item Suggest modifications to which data workbooks are used
+\item Suggest that instructors consider modifying the scope or sequence of instruction
+\item Modify the learning outcomes themselves
+\item Modify the competency as a whole
+\end{itemize}
+
+## Acknowledgments {-}
+
+This report was built using Rmarkdown and the bookdown R package. The valuable contributions made by the members of the General Education Committee, Academic Senate, and Department of Biological Sciences are also greatly appreciated.
