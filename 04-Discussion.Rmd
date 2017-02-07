@@ -5,7 +5,7 @@ A novel approach for the collection, aggregation, analysis, and reporting of Gen
 Over a span of `r max(myData$Order)` semesters, `r round(sum(averages$mean >= 2.6)/length(averages$mean)*100,1)`% of courses had mean scores considered to be proficient. Of all students in all semesters, `r round(sum(myData$SCI1 >= 3)/length(myData$SCI1)*100,1)`% met or exceeded the competence threshold. From these data it is inferred that the students meet (just barely) the threshold of competence.
 
 ## Faculty feedback {-}
-This report will be distributed to members of the General Education Committee, Academic Senate, and the Department of Biological Sciences.  These individuals will be asked to provide their comments, suggestions, and concerns about this report and the processes involved in its creation. What thoughts do you have about:
+This report was distributed to members of the General Education Committee, Academic Senate, and the Department of Biological Sciences.  These individuals were asked to provide their comments, suggestions, and concerns about this report and the processes involved in its creation. A simple SurveyMonkey instrument was developed to gather some feedback. The instrument consisted of the following six questions. The first five questions were five-level Likert scale items (Strongly dislike, Somewhat dislike, Neutral, Somewhat like, and Strongly Like). The format of the final item was free response (short answer).
 
 * **Q01** - What is your opinion of the format of the General Education assessment report?
 * **Q02** - What is your opinion of the content of the General Education assessment report?
@@ -13,6 +13,8 @@ This report will be distributed to members of the General Education Committee, A
 * **Q04** - What is your opinion of the use of meta-analysis in the General Education assessment report?
 * **Q05** - What is your opinion of the plan to publicly share assessment data, analyses, and reports?
 * **Q06** - What suggestions do you have to improve the General Education Report?
+
+A total of 12 responses were obtained from the faculty. The results for the first five questions are summarized in Figure \@ref(fig:survey). 
 
 ```{r survey, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=2, fig.cap="Results of the faculty survey (n=12)"}
 
