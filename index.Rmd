@@ -23,7 +23,6 @@ biblio-style: apalike
 \rhead{}
 \renewcommand{\headrulewidth}{0pt}
 
-
 ```{R packages, echo=FALSE, message=FALSE, warning=FALSE}
 
 #----------------------------------------------------------------------------------------
