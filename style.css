@@ -18,16 +18,16 @@ blockquote p {
 	display: inline;
 }
 
-a:link {
+.normal a:link {
     color: #FF3300;
 }
-a:visited {
+.normal a:visited {
     color: #FF3300;
 }
-a:hover {
+.normal a:hover {
     color: #FF3300;
-    font-style: bold;
+    font-weight: bold;
 }
-a:active {
+.normal a:active {
     color: #FF3300;
 }
