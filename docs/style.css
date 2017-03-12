@@ -32,3 +32,16 @@ blockquote p {
 .book .book-body .page-wrapper .page-inner section.normal a:active {
     color: #CC0033;
 }
+
+.book .book-summary nav ul.summary li.chapter.active a:link {
+    color: #CC0033;
+    font-weight: bold;
+}
+.book .book-summary nav ul.summary li a:hover {
+    color: #CC0033;
+    font-weight: bold;
+}
+.book .book-summary nav ul.summary li a:active {
+    color: #CC0033;
+    font-weight: bold;
+}
