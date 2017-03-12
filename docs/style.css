@@ -18,6 +18,11 @@ blockquote p {
 	display: inline;
 }
 
+.book .book-body .page-wrapper .page-inner section.normal .rules table.info {
+	background-color: #666666;
+	border: 0;
+}
+
 .book .book-body .page-wrapper .page-inner section.normal a:link {
     color: #CC0033;
 }
