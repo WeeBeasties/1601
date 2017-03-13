@@ -18,7 +18,7 @@ blockquote p {
 	display: inline;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal .rules table.info {
+.book .book-body .page-wrapper .page-inner section.normal .rules .info {
 	background-color: #666666;
 	border: 0;
 }
